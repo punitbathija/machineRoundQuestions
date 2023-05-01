@@ -7,7 +7,7 @@ function count() {
 }
 
 count();
-// // Without var
+// Without var
 
 function countWVar() {
   for (var i = 1; i <= 5; i++) {
@@ -21,7 +21,7 @@ function countWVar() {
 }
 
 countWVar();
-// // With var
+// With var
 
 function outest() {
   function outer(b) {
@@ -38,7 +38,7 @@ function outest() {
 var closure = outest()("Hello world!");
 closure();
 
-// // Crazy example of closure
+// Crazy example of closure
 
 function counter() {
   var count = 0;
@@ -73,7 +73,7 @@ var coutPlusOne = new CompleteCounter();
 coutPlusOne.incrementCounter();
 coutPlusOne.decrementCounter();
 
-// Data encapsulation with multiple cases
+Data encapsulation with multiple cases
 
 let like = document.getElementById("like");
 let addLike = document.getElementById("add");
