@@ -85,5 +85,8 @@ const age = users.reduce(function (acc, curr) {
 
 console.log(age);
 
-// Total Hero Example
-console.log(users.filter((x) => x.age <= 25).map((x) => x.firstName));
+const ageLessThan30 = function (users) {
+  if (users.age < 30) {
+    return users;
+  }
+};
