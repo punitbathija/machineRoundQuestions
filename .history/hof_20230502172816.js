@@ -73,14 +73,3 @@ const users = [
 ];
 
 console.log(users.map((x) => x.firstName + " " + x.lastName));
-
-const age = users.reduce(function (acc, curr) {
-  if (acc[curr.age]) {
-    acc[curr.age] = ++acc[curr.age];
-  } else {
-    acc[curr.age] = 1;
-  }
-  return acc;
-}, {});
-
-console.log(age);

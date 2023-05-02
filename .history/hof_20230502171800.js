@@ -64,23 +64,3 @@ const maxiumum = arr.reduce(function (acc, curr) {
 }, 0);
 
 console.log(maxiumum);
-
-const users = [
-  { firstName: "Punit", lastName: "Bathija", age: 25 },
-  { firstName: "Narendra", lastName: "Modi", age: 75 },
-  { firstName: "Akshay", lastName: "Saini", age: 28 },
-  { firstName: "Saadat", lastName: "Badgujar", age: 25 },
-];
-
-console.log(users.map((x) => x.firstName + " " + x.lastName));
-
-const age = users.reduce(function (acc, curr) {
-  if (acc[curr.age]) {
-    acc[curr.age] = ++acc[curr.age];
-  } else {
-    acc[curr.age] = 1;
-  }
-  return acc;
-}, {});
-
-console.log(age);

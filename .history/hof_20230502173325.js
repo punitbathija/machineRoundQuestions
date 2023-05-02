@@ -82,5 +82,3 @@ const age = users.reduce(function (acc, curr) {
   }
   return acc;
 }, {});
-
-console.log(age);
