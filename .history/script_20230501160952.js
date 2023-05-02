@@ -78,7 +78,6 @@ coutPlusOne.decrementCounter();
 let like = document.getElementById("like");
 let addLike = document.getElementById("add");
 let removeLike = document.getElementById("remove");
-let picture = document.getElementById("picture");
 
 function LikeCounter() {
   var likes = 0;
@@ -104,6 +103,5 @@ function removeLikes() {
   like.innerText = `${totalLikes} Likes`;
 }
 
-addLike.addEventListener("click", addLikes);
+addLike.addEventListener("dblclick", addLikes);
 removeLike.addEventListener("click", removeLikes);
-picture.addEventListener("dblclick", addLikes);
