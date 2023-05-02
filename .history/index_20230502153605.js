@@ -37,26 +37,26 @@
 
 const radius = [3, 1, 2, 4];
 
-const area = function (radius) {
+const area = function () {
   return Math.PI * radius * radius;
 };
 
-const circumference = function (radius) {
+const circumference = function () {
   return 2 * Math.PI * radius;
 };
 
-const diameter = function (radius) {
+const diameter = function () {
   return 2 * radius;
 };
 
 const calculate = function (radius, logic) {
   const output = [];
-  for (i = 0; i < radius.length; i++) {
+  for (let i = 0; i < radius.length; i++) {
     output.push(logic(radius[i]));
   }
   return output;
 };
 
-console.log(calculate(radius, area));
-console.log(calculate(radius, circumference));
-console.log(calculate(radius, diameter));
+console.log(calculate(area, radius));
+console.log(calculate(circumference, radius));
+console.log(calculate(diameter, radius));

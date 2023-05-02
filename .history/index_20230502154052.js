@@ -49,7 +49,7 @@ const diameter = function (radius) {
   return 2 * radius;
 };
 
-const calculate = function (radius, logic) {
+const calculate = function (logic, radius) {
   const output = [];
   for (i = 0; i < radius.length; i++) {
     output.push(logic(radius[i]));
@@ -58,5 +58,3 @@ const calculate = function (radius, logic) {
 };
 
 console.log(calculate(radius, area));
-console.log(calculate(radius, circumference));
-console.log(calculate(radius, diameter));
