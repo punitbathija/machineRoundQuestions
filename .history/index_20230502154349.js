@@ -57,35 +57,6 @@ const calculate = function (radius, logic) {
   return output;
 };
 
-console.log("Area is " + calculate(radius, area));
-console.log("Circumference is " + calculate(radius, circumference));
-console.log("Diameter is " + calculate(radius, diameter));
-
-const num = [2, 4, 6, 8, 10];
-
-const multiplyBy2 = function (num) {
-  return num * 2;
-};
-
-const multiplyBy4 = function (num) {
-  return num * 4;
-};
-const multiplyBy5 = function (num) {
-  return num * 5;
-};
-const multiplyBy10 = function (num) {
-  return num * 10;
-};
-
-const cal = function (num, logix) {
-  const answer = [];
-  for (i = 0; i < num.length; i++) {
-    answer.push(logix(num[i]));
-  }
-  return answer;
-};
-
-console.log("Multiplied by 2 is " + cal(num, multiplyBy2));
-console.log("Multiplied by 4 is " + cal(num, multiplyBy4));
-console.log("Multiplied by 5 is " + cal(num, multiplyBy5));
-console.log("Multiplied by 10 is " + cal(num, multiplyBy10));
+console.log("Area is" + calculate(radius, area));
+console.log("Circumference is" + calculate(radius, circumference));
+console.log("Diameter is" + calculate(radius, diameter));

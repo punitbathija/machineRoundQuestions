@@ -79,7 +79,7 @@ const multiplyBy10 = function (num) {
 
 const cal = function (num, logix) {
   const answer = [];
-  for (i = 0; i < num.length; i++) {
+  for (i = 0; i < num; i++) {
     answer.push(logix(num[i]));
   }
   return answer;

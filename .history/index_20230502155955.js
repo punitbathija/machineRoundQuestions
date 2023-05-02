@@ -79,13 +79,13 @@ const multiplyBy10 = function (num) {
 
 const cal = function (num, logix) {
   const answer = [];
-  for (i = 0; i < num.length; i++) {
+  for (i = 0; i < num; i++) {
     answer.push(logix(num[i]));
   }
   return answer;
 };
 
-console.log("Multiplied by 2 is " + cal(num, multiplyBy2));
-console.log("Multiplied by 4 is " + cal(num, multiplyBy4));
-console.log("Multiplied by 5 is " + cal(num, multiplyBy5));
-console.log("Multiplied by 10 is " + cal(num, multiplyBy10));
+console.log(num(multiplyBy2));
+console.log(num(multiplyBy4));
+console.log(num(multiplyBy5));
+console.log(num(multiplyBy10));
