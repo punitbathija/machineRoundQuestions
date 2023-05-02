@@ -57,8 +57,7 @@ const answer = arr.reduce(function (acc, curr) {
 console.log(answer);
 
 const maxiumum = arr.reduce(function (acc, curr) {
-  if (curr > acc) {
-    acc = curr;
+  if (acc > curr) {
   }
   return acc;
 }, 0);

@@ -51,16 +51,6 @@ console.log(output);
 
 const answer = arr.reduce(function (acc, curr) {
   acc = acc + curr;
-  return acc;
 }, 0);
 
 console.log(answer);
-
-const maxiumum = arr.reduce(function (acc, curr) {
-  if (curr > acc) {
-    acc = curr;
-  }
-  return acc;
-}, 0);
-
-console.log(maxiumum);
