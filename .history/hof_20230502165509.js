@@ -1,5 +1,4 @@
 const arr = [2, 4, 6, 8, 10, 1, 3, 5, 7];
-const newArr = [1, 2, 3];
 
 function double(x) {
   return x * x;
@@ -37,14 +36,14 @@ function findSum(arr) {
   return sum;
 }
 
-function findProduct(newArr) {
-  let sum = 1;
-  for (let i = 0; i < newArr.length; i++) {
-    sum = sum * newArr[i];
+function findProduct(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum - arr[i];
   }
   return sum;
 }
 console.log(findSum(arr));
-console.log(findProduct(newArr));
+console.log(findProduct(arr));
 
 console.log(output);
