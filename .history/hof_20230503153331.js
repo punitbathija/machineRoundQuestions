@@ -105,16 +105,14 @@ cart = ["nike dunks", "levis jeans", "h&m t-shirt"];
 
 const promise = createOrder(cart);
 
-promise
-  .then(function (orderId) {
-    console.log("Order Successfull with Order Id:" + orderId);
-  })
-  .catch(alert("Order Failed while validatating cart"));
+promise.then(function (orderId) {
+  console.log("Order Successfull with Order Id:" + orderId);
+});
 
 //Creating a promise
 
 function validateCart() {
-  return false;
+  return true;
 }
 
 function createOrder(cart) {

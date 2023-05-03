@@ -109,7 +109,7 @@ promise
   .then(function (orderId) {
     console.log("Order Successfull with Order Id:" + orderId);
   })
-  .catch(alert("Order Failed while validatating cart"));
+  .catch(alert("Order Failed while calidationt cart"));
 
 //Creating a promise
 
