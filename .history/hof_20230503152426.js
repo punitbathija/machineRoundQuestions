@@ -104,16 +104,11 @@ cart = ["nike dunks", "levis jeans", "h&m t-shirt"];
 //consuming a promise
 
 const promise = createOrder(cart);
-
 promise.then(function (orderId) {
-  console.log("Order Successfull with Order Id:" + orderId);
+  console.log("Order Successfull" + orderId);
 });
 
 //Creating a promise
-
-function validateCart() {
-  return true;
-}
 
 function createOrder(cart) {
   const order = new Promise(function (res, rej) {
@@ -125,11 +120,11 @@ function createOrder(cart) {
 
     const orderId = "73318";
     if (orderId) {
-      // Here there is a delay to simulate db operations
-      setTimeout(function () {
-        res(orderId);
-      }, 5000);
+      res(orderId);
     }
   });
-  return order;
+}
+
+function validateCart() {
+  return true;
 }

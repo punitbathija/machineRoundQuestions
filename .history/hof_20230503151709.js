@@ -99,37 +99,11 @@ const user = fetch(GITHUB_API);
 
 console.log(user);
 
-cart = ["nike dunks", "levis jeans", "h&m t-shirt"];
-
-//consuming a promise
-
-const promise = createOrder(cart);
-
-promise.then(function (orderId) {
-  console.log("Order Successfull with Order Id:" + orderId);
-});
-
 //Creating a promise
 
-function validateCart() {
-  return true;
-}
-
-function createOrder(cart) {
-  const order = new Promise(function (res, rej) {
-    if (!validateCart(cart)) {
-      const err = new Error("cart is not valid");
-      rej(err);
-    }
-    // logic of create order
-
-    const orderId = "73318";
-    if (orderId) {
-      // Here there is a delay to simulate db operations
-      setTimeout(function () {
-        res(orderId);
-      }, 5000);
-    }
-  });
-  return order;
-}
+const order = new Promise(function (res, rej) {
+  if (!validateCart(cart)) {
+    const err = new Error("cart is not valid");
+    rej(err);
+  }
+});

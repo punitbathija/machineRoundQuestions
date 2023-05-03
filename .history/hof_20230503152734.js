@@ -125,10 +125,7 @@ function createOrder(cart) {
 
     const orderId = "73318";
     if (orderId) {
-      // Here there is a delay to simulate db operations
-      setTimeout(function () {
-        res(orderId);
-      }, 5000);
+      res(orderId);
     }
   });
   return order;

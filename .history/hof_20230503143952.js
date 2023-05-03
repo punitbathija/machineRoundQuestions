@@ -88,48 +88,10 @@ console.log(age);
 // Total Hero Example
 console.log(users.filter((x) => x.age <= 25).map((x) => x.firstName));
 
-// Fetching an API
 const GITHUB_API = "https://api.github.com/users/punitbathija";
 
 const user = fetch(GITHUB_API);
 
-// user.then(function (data) {
-//   console.log(data);
-// });
-
-console.log(user);
-
-cart = ["nike dunks", "levis jeans", "h&m t-shirt"];
-
-//consuming a promise
-
-const promise = createOrder(cart);
-
-promise.then(function (orderId) {
-  console.log("Order Successfull with Order Id:" + orderId);
+user.then(function (data) {
+  console.log(data);
 });
-
-//Creating a promise
-
-function validateCart() {
-  return true;
-}
-
-function createOrder(cart) {
-  const order = new Promise(function (res, rej) {
-    if (!validateCart(cart)) {
-      const err = new Error("cart is not valid");
-      rej(err);
-    }
-    // logic of create order
-
-    const orderId = "73318";
-    if (orderId) {
-      // Here there is a delay to simulate db operations
-      setTimeout(function () {
-        res(orderId);
-      }, 5000);
-    }
-  });
-  return order;
-}
