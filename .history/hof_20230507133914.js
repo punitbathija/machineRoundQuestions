@@ -170,9 +170,8 @@ let multiply = function (x, y) {
 
 multiply(3, 5);
 
-let multipyByTwo = multiply.bind(this, 2);
+// let multipyByTwo = multiply.bind(this, 2);
 
 let multiplyByThree = multiply.bind(this, 3);
 
 multipyByTwo(2);
-multiplyByThree(2);

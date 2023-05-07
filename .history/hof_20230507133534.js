@@ -114,7 +114,7 @@ promise
 //Creating a promise
 
 function validateCart() {
-  return true;
+  return false;
 }
 
 function createOrder(cart) {
@@ -167,12 +167,3 @@ child.addEventListener(
 let multiply = function (x, y) {
   console.log(x * y);
 };
-
-multiply(3, 5);
-
-let multipyByTwo = multiply.bind(this, 2);
-
-let multiplyByThree = multiply.bind(this, 3);
-
-multipyByTwo(2);
-multiplyByThree(2);
