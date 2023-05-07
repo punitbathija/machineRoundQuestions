@@ -136,6 +136,8 @@ function createOrder(cart) {
   return order;
 }
 
+//Event Bubbling and Capturing
+
 const grandParent = document.getElementById("grandParent");
 const parent = document.getElementById("parent");
 const child = document.getElementById("child");
@@ -164,6 +166,8 @@ child.addEventListener(
   true
 );
 
+//Bind Method
+
 let multiply = function (x, y) {
   console.log(x * y);
 };
@@ -176,3 +180,32 @@ let multiplyByThree = multiply.bind(this, 3);
 
 multipyByTwo(2);
 multiplyByThree(2);
+
+let add = function (x) {
+  return function (y) {
+    console.log(x + y);
+  };
+};
+
+addByThree = add(3);
+
+addByThree(6);
+
+//Call Method
+
+let name = {
+  firstName: "Punit",
+  lastName: "Bathija",
+  getFullName: function () {
+    console.log(this.firstName + " " + this.lastName);
+  },
+};
+
+name.getFullName();
+
+let nameTwo = {
+  firstName: "Sachin",
+  lastName: "Tendulkar",
+};
+
+name.getFullName.call(nameTwo);
