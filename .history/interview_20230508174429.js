@@ -177,7 +177,7 @@ function isProbablePalindrome(str) {
   return true;
 }
 
-const input = "tooth"; // This string can form a probable palindrome with different combinations
+const input = "scam"; // This string can form a probable palindrome with different combinations
 
 const isProbable = isProbablePalindrome(input);
 
