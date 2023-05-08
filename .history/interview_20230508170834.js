@@ -2,8 +2,8 @@
 
 let arr = [2, 6, 7, 2, 4, 7, 12, 55];
 
-let dublicate = arr.filter((value, index) => {
-  return arr.indexOf(value) !== index;
+let dublicate = arr.filter((value, index, dub) => {
+  return dub.indexOf(value) !== index;
 });
 
 console.log(dublicate);
@@ -177,7 +177,7 @@ function isProbablePalindrome(str) {
   return true;
 }
 
-const input = "scam"; // This string can form a probable palindrome with different combinations
+const input = "racecar"; // This string can form a probable palindrome with different combinations
 
 const isProbable = isProbablePalindrome(input);
 

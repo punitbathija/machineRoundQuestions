@@ -208,21 +208,3 @@ let nameTwo = {
 };
 
 name.getFullName.call(nameTwo);
-
-const lowest = 1;
-const highest = 100;
-
-for (let i = lowest; i <= highest; i++) {
-  let flag = 0;
-
-  for (let j = 2; j < i; j++) {
-    if (i % j === 0) {
-      flag = 1;
-      break;
-    }
-  }
-
-  if (i > 1 && flag == 0) {
-    console.log(i);
-  }
-}

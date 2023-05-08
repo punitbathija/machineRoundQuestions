@@ -2,8 +2,8 @@
 
 let arr = [2, 6, 7, 2, 4, 7, 12, 55];
 
-let dublicate = arr.filter((value, index) => {
-  return arr.indexOf(value) !== index;
+let dublicate = arr.filter((value, index, dub) => {
+  return dub.indexOf(value) !== index;
 });
 
 console.log(dublicate);
@@ -144,49 +144,11 @@ const numb = prompt("Enter a number to get fibonacci series");
 let numOne = 0,
   numTwo = 1,
   nextNum;
+console.log("Fibonacci series is as follows:- ");
 
 for (let i = 1; i < numb; i++) {
-  console.log("Fibonacci series is as follows:- " + numOne);
+  console.log(numOne);
   nextNum = numOne + numTwo;
   numOne = numTwo;
   numTwo = nextNum;
-}
-
-// Write a function which can tell if a group of characters can be probable palindrone string with diferrent combinations
-
-function isProbablePalindrome(str) {
-  const charCount = {}; // Initialize empty object to store character counts
-  let oddCount = 0; // Initialize count of characters with odd frequency to 0
-
-  // Count the frequency of each character in the string
-  for (let i = 0; i < str.length; i++) {
-    const char = str[i];
-    charCount[char] = charCount[char] ? charCount[char] + 1 : 1; // Increment the count of the character
-  }
-
-  // Check if there is at most one character with odd frequency
-  for (let char in charCount) {
-    if (charCount[char] % 2 !== 0) {
-      oddCount++;
-      if (oddCount > 1) {
-        return false;
-      }
-    }
-  }
-
-  return true;
-}
-
-const input = "scam"; // This string can form a probable palindrome with different combinations
-
-const isProbable = isProbablePalindrome(input);
-
-if (isProbable) {
-  console.log(
-    `The string "${input}" can form a probable palindrome with different combinations.`
-  );
-} else {
-  console.log(
-    `The string "${input}" cannot form a probable palindrome with different combinations.`
-  );
 }
