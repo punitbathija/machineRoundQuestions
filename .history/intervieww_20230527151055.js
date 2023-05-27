@@ -15,3 +15,5 @@ const doMagic = function (fn, delay) {
 };
 
 const betterFunction = doMagic(getData, 3000);
+
+betterFunction();

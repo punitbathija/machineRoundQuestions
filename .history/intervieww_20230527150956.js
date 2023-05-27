@@ -1,4 +1,4 @@
-// Debouncing in javascript;
+Debouncing in javascript;
 
 const query = document.getElementById("query").value;
 
@@ -15,3 +15,7 @@ const doMagic = function (fn, delay) {
 };
 
 const betterFunction = doMagic(getData, 3000);
+
+betterFunction();
+
+console.log(module);
