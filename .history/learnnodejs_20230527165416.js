@@ -40,18 +40,10 @@ emmiter.emit("logginIn", { id: 101, data: "Punit Bathija" });
 const server = http.createServer((req, res) => {
   if (req.url === "/") {
     res.write("Hello World");
-    res.end();
-  }
-
-  if (req.url === "/name") {
-    res.write(JSON.stringify(["Punit", "Rajesh", "Sonam", "Manisha"]));
-    res.end();
   }
 });
 
-server.listen(3000);
-
-console.log("listening on port 3000");
+server.listen(420);
 
 greet("Punit");
 count(1);

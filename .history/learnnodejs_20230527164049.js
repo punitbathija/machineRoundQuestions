@@ -5,7 +5,6 @@ const os = require("os");
 const fs = require("fs");
 const EventEmitter = require("events");
 const emmiter = new EventEmitter();
-const http = require("http");
 
 const actualPathObj = path.parse(__filename);
 console.log(actualPathObj);
@@ -32,26 +31,10 @@ emmiter.on("messageLogged", function (e) {
 emmiter.emit("messageLogged", { id: 1, url: "http://" });
 
 emmiter.on("logginIn", function (e) {
-  console.log("User logged in as ", e);
+  console.log("User logged in as ");
 });
 
 emmiter.emit("logginIn", { id: 101, data: "Punit Bathija" });
-
-const server = http.createServer((req, res) => {
-  if (req.url === "/") {
-    res.write("Hello World");
-    res.end();
-  }
-
-  if (req.url === "/name") {
-    res.write(JSON.stringify(["Punit", "Rajesh", "Sonam", "Manisha"]));
-    res.end();
-  }
-});
-
-server.listen(3000);
-
-console.log("listening on port 3000");
 
 greet("Punit");
 count(1);

@@ -42,11 +42,6 @@ const server = http.createServer((req, res) => {
     res.write("Hello World");
     res.end();
   }
-
-  if (req.url === "/name") {
-    res.write(JSON.stringify(["Punit", "Rajesh", "Sonam", "Manisha"]));
-    res.end();
-  }
 });
 
 server.listen(3000);
