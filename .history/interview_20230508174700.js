@@ -153,8 +153,7 @@ for (let i = 1; i < numb; i++) {
   numTwo = nextNum;
 }
 
-// Write a function which can tell if a group of characters can be probable
-// palindrone string with diferrent combinations
+// Write a function which can tell if a group of characters can be probable palindrone string with diferrent combinations
 
 function isProbablePalindrome(str) {
   const charCount = {}; // Initialize empty object to store character counts
@@ -179,8 +178,7 @@ function isProbablePalindrome(str) {
   return true;
 }
 
-const input = "tooth"; // This string can form a probable palindrome
-//  with different combinations
+const input = "tooth"; // This string can form a probable palindrome with different combinations
 
 const isProbable = isProbablePalindrome(input);
 
